@@ -4,9 +4,9 @@ Nudge was conceived as a way to anonymously let someone know you are thinking ab
 
 You can find more information about Nudge on [my website](https://www.richardfxr.com/projects/nudge).
 
-## Getting Started
+## Prerequisites
 
-These instructions will get your very own Nudge up and running!
+You'll need these before you can get Nudge up and running.
 
 ### Hardware Prerequisites
 
@@ -45,6 +45,8 @@ Replace the following:
 - ``feed_id``: The feed ID found under the “Feed Info” section of your new feed.
 - ``id``: The ID for the data point can be found by going to ``https://io.adafruit.com/api/v2/IO_USERNAME/feeds/feed_id/data/``.
 - ``IO_KEY``: Your Adafruit IO key found under the “My Key” tab.
+
+Note that Adafruit IO may be updated in the future. Refer to the [Adafruit IO API documentation](https://io.adafruit.com/api/docs/#adafruit-io-http-api) if above method fails.
 
 ### Webpage
 
