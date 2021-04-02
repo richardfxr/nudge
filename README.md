@@ -33,7 +33,7 @@ Install CircuitPython on the Matrix Portal using [Adafruit’s CircuitPython gui
 
 Setup an Adafruit IO account and create a new feed. Ensure that the new feed has one data point.
 
-Open [index.html](index.html), you will find the URL for the PUT requests on lines 125, 139, 153, 167, and 181 that looks like:
+Open [index.html](Webpage/index.html), you will find the URL for the PUT requests on lines 125, 139, 153, 167, and 181 that looks like:
 
 ```
 url: "https://io.adafruit.com/api/v2/IO_USERNAME/feeds/feed_id/data/id?x-aio-key=IO_KEY",
@@ -48,7 +48,7 @@ Replace the following:
 
 ### Webpage
 
-Upload the updated HTML, CSS, and SVG files under the Webpage folder to your server and ensure the page works correctly. Here is a [live version of the page](https://www.richardfxr.com/nudge) for comparison. Don’t forget to update line 19 of [index.html](index.html) with your name. 
+Upload the updated HTML, CSS, and SVG files under the Webpage folder to your server and ensure the page works correctly. Here is a [live version of the page](https://www.richardfxr.com/nudge) for comparison. Don’t forget to update line 19 of [index.html](Webpage/index.html) with your name. 
 
 ### Matrix Portal
 
