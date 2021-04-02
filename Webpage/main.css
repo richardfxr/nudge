@@ -1,0 +1,246 @@
+/*
+GOOGLE FONTS IMPORT
+*/
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&family=Rubik:wght@400;500&display=swap");
+
+
+
+/*
+GENERAL
+*/
+body, html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body, .w-embed {
+  margin: 0;
+  background-color: #F2F2E6;
+}
+
+#container-main, #container-comments {
+  max-width: 1800px;
+  padding: 0 min(5vw, 90px);
+  margin: auto;
+}
+
+h1 {
+  display: block;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+h2 {
+  display: block;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+h1, h2 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  line-height: normal;
+}
+
+p {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/*
+TITLE AREA
+*/
+#container-main {
+  padding-bottom: 140px;
+}
+
+#heading {
+  padding: 70px 0;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  font-size: calc(55px + (88 - 55) * ((min(100vw, 1800px) - 300px) / (1800 - 300)));
+  color: #4D4D4D;
+}
+
+#logo {
+  width: calc(100px + (160 - 100) * ((min(100vw, 1800px) - 300px) / (1800 - 300)));
+  margin-bottom: calc((100px + (160 - 100) * ((min(100vw, 1800px) - 300px) / (1800 - 300))) * -0.12);
+}
+
+#heading span {
+  display: block;
+  margin-left: calc((55px + (88 - 55) * ((min(100vw, 1800px) - 300px) / (1800 - 300))) * -0.05);
+}
+
+#p-title {
+  color: #666666;
+  margin-top: 35px;
+}
+
+#p-title a {
+  color: #666666;
+  border-bottom: 2px solid #CCCCCC;
+
+  transition: border-color 0.3s;
+}
+
+#p-title a:hover {
+  border-color: #666666;
+}
+
+
+/*
+MAIN PAGE AREA
+*/
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(19rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  grid-gap: calc(25px + (40 - 25) * ((min(100vw, 1800px) - 300px) / (1800 - 300)));
+}
+
+
+
+/*
+ANIMATION CARDS
+*/
+.card {
+  display: inline-block;
+  position: relative;
+  border-radius: 7px;
+
+  transition: transform 0.3s;
+}
+
+/* hover effect */
+.card:hover {
+  transform: translateY(calc((10px + (16 - 10) * ((min(100vw, 1800px) - 300px) / (1800 - 300))) * -1));
+}
+
+/* label */
+.label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10% 10% 0 10%;
+}
+
+.ani-icon {
+  height: calc(30px + (48 - 30) * ((min(100vw, 1800px) - 300px) / (1800 - 300)));
+  padding-right: calc(15px + (24 - 15) * ((min(100vw, 1800px) - 300px) / (1800 - 300)));
+}
+
+.label h2 {
+  font-size: calc(25px + (40 - 25) * ((min(100vw, 1800px) - 300px) / (1800 - 300)));;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* background SVG */
+.ani-svg-bg {
+  width: 100%;
+  padding: 30% 10% 10% 10%;
+  opacity: 0.7;
+
+  transition: opacity 0.4s;
+}
+
+.card:hover .ani-svg-bg {
+  opacity: 1;
+}
+
+
+
+/*
+COMMENTS AREA
+*/
+#bg-comments {
+  margin: 0;
+  background-color: #DEDED3;
+}
+
+#container-comments {
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+
+#container-comments h2 {
+  font-size: 35px;
+  color: #4D4D4D;
+  margin-top: 80px;
+}
+
+#container-comments p {
+  color: #4D4D4D;
+}
+
+#container-comments a {
+  color: #000000;
+  border-bottom: 2px solid #B3B3B3;
+
+  transition: border-color 0.3s;
+}
+
+#container-comments a:hover {
+  border-color: #000000;
+}
+
+
+
+/*
+FOOTER
+*/
+footer {
+  padding-top: 60px;
+}
+
+
+
+/*
+BREAKPOINTS
+*/
+
+/* mobile layout */
+@media only screen and (max-width: 726px) {
+
+  /* animation cards */
+  .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card:hover {
+    transform: translateY(0);
+  }
+
+  .label {
+    padding: 7% 0 7% 7%;
+  }
+
+  .ani-svg-bg {
+    width: 40%;
+    padding: 7% 7% 7% 0;
+  }
+}

@@ -19,20 +19,44 @@ Note that the code will not work properly with LED matrices of a different resol
 ### Software Prerequisites
 
 - [CircuitPython](https://circuitpython.org/)
+- [Adafruit IO](https://io.adafruit.com/)
 
-### Setup
+## Setup
+
+### LED Matrix and CircuitPython
 
 Connect the Matrix Portal to the LED matrix by following [Adafruit’s Matrix Portal prep guide](https://learn.adafruit.com/adafruit-matrixportal-m4/prep-the-matrixportal).
 
 Install CircuitPython on the Matrix Portal using [Adafruit’s CircuitPython guide](https://learn.adafruit.com/adafruit-matrixportal-m4/install-circuitpython).
 
-Upload the HTML, CSS, and SVG files under Webpage to your server and ensure the page works correctly. Here is a [live version of the page](https://www.richardfxr.com/nudge) for comparison. Don’t forget to update the HTML file with your name. 
+### Adafruit IO
+
+Setup an Adafruit IO account and create a new feed. Ensure that the new feed has one data point.
+
+Open [index.html](index.html), you will find the URL for the PUT requests on lines 125, 139, 153, 167, and 181 that looks like:
+
+```
+url: "https://io.adafruit.com/api/v2/IO_USERNAME/feeds/feed_id/data/id?x-aio-key=IO_KEY",
+```
+
+Replace the following:
+
+- ``IO_USERNAME``: Your Adafruit IO username found under the “My Key” tab.
+- ``feed_id``: The feed ID found under the “Feed Info” section of your new feed.
+- ``id``: The ID for the data point can be found by going to ``https://io.adafruit.com/api/v2/IO_USERNAME/feeds/feed_id/data/``.
+- ``IO_KEY``: Your Adafruit IO key found under the “My Key” tab.
+
+### Webpage
+
+Upload the updated HTML, CSS, and SVG files under the Webpage folder to your server and ensure the page works correctly. Here is a [live version of the page](https://www.richardfxr.com/nudge) for comparison. Don’t forget to update line 19 of [index.html](index.html) with your name. 
+
+### Matrix Portal
 
 Update [secrets.py](secrets.py) with the SSID and password of your Wi-Fi network.
 
 Connect the Matrix Portal to your computer. Copy [secrets.py](secrets.py), [code.py](code.py), and everything inside the BMPs folder into CIRCUITRY. Make sure the BMP files are in the top-level directory and not inside a folder like they are here on Github.
 
-The Matrix Portal should start running the code automatically. Check the output in a compatible IDE such as the [Mu editor](https://codewith.mu/). If all goes well, you should see the following output:
+The Matrix Portal should start running the code automatically. Check the output in a compatible editor such as the [Mu editor](https://codewith.mu/). If all goes well, you should see the following output:
 
 ```
 
@@ -81,4 +105,4 @@ The Matrix Portal should start running the code automatically. Check the output 
 
 ## Acknowledgments
 
-Functions by [Erin St Blaine](https://learn.adafruit.com/users/firepixie) from the [Ocean Epoxy Resin Lightbox with RGB LED Matrix Image Scroller guide](https://learn.adafruit.com/ocean-epoxy-resin-lightbox-with-rgb-led-matrix-image-scroller) were used in [code.py](code.py).
+Functions by [Erin St Blaine](https://learn.adafruit.com/users/firepixie) from the [Ocean Epoxy Resin Lightbox with RGB LED Matrix Image Scroller guide](https://learn.adafruit.com/ocean-epoxy-resin-lightbox-with-rgb-led-matrix-image-scroller/circuitpython-code) were used in [code.py](code.py).

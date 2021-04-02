@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nudge &#128073;</title>
+    <link rel="icon" type="image/png" href="/Nudge-favicon-1.png"/>
+    <link rel="stylesheet" href="CSS/main.css">
+</head>
+
+<body>
+    <div id="container-main">
+
+        <!-- heading area -->
+        <div id="heading">
+            <h1>
+                <img id="logo" src="SVGs/Nudge-logo-1.svg" alt="Nudge" draggable="false">
+                <span>Enter your name here</span>
+            </h1>
+            <p id="p-title">Select an animations to play on my display. <a href="#how">How this works ↓</a></p>
+        </div>
+
+
+        <!-- main page area -->
+        <main>
+
+            <!-- animation card 1 -->
+            <a class="card" onclick="aniOne();setTimeout(reset, 3000);" style="background-color: #F78F1E;">
+                <div class="label">
+                    <img class="ani-icon" src="SVGs/wave-1.svg" alt="waving hand" draggable="false">
+                    <h2 id="textOne">wave</h2>
+                </div>
+                <img class="ani-svg-bg" src="SVGs/wave-dots-1.svg" alt="wave animation on dot matrix" draggable="false">
+            </a>
+
+            <!-- animation card 2 -->
+            <a class="card" onclick="aniTwo();setTimeout(reset, 3000);" style="background-color: #48AA4A;">
+                <div class="label">
+                    <img class="ani-icon" src="SVGs/poke-1.svg" alt="waving hand" draggable="false">
+                    <h2 id="textTwo">poke</h2>
+                </div>
+                <img class="ani-svg-bg" src="SVGs/poke-dots-1.svg" alt="wave animation on dot matrix" draggable="false">
+            </a>
+
+            <!-- animation card 3 -->
+            <a class="card" onclick="aniThree();setTimeout(reset, 3000);" style="background-color: #D4405A;">
+                <div class="label">
+                    <img class="ani-icon" src="SVGs/tickle-1.svg" alt="waving hand" draggable="false">
+                    <h2 id="textThree">tickle</h2>
+                </div>
+                <img class="ani-svg-bg" src="SVGs/tickle-dots-1.svg" alt="wave animation on dot matrix" draggable="false">
+            </a>
+
+            <!-- animation card 4 -->
+            <a class="card" onclick="aniFour();setTimeout(reset, 3000);" style="background-color: #2A95C0;">
+                <div class="label">
+                    <img class="ani-icon" src="SVGs/pinch-1.svg" alt="waving hand" draggable="false">
+                    <h2 id="textFour">pinch</h2>
+                </div>
+                <img class="ani-svg-bg" src="SVGs/pinch-dots-1.svg" alt="wave animation on dot matrix" draggable="false">
+            </a>
+
+        </main>
+
+    </div>
+
+
+
+    <div id="bg-comments">
+        <div id="container-comments">
+
+            <!-- comments area -->
+            <div id="comments">
+
+                <div id="about">
+                    <h2>About Nudge</h2>
+                    <p>Nudge was conceived as a way for people to communicate anonymously through animations on an LED matrix. It’s a way to let someone know you’re thinking about them without demanding a reply. Especially during these challenging times, Nudge is meant to remind people that they are not alone, that someone out there is thinking of them.</p>
+                </div>
+
+                <div id="how">
+                    <h2>How this works</h2>
+                    <p>When you entered this URL (www.richardfxr.com/nudge), an <a href="https://en.wikipedia.org/wiki/Amazon_Web_Services" target="_blank" rel="noreferrer noopener">AWS ↗</a> server responded to your request with the <a href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noreferrer noopener">HTML file ↗</a>, while the <a href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noreferrer noopener">CSS file ↗</a> was retrieved through a <a href="https://en.wikipedia.org/wiki/Reverse_proxy" target="_blank" rel="noreferrer noopener">reverse proxy ↗</a> that connects to my local server. When you click on one of the animation cards above, some <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" rel="noreferrer noopener">JavaScript ↗</a> sends a <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank" rel="noreferrer noopener">PUT HTTP request ↗</a> to the <a href="https://io.adafruit.com/api/docs/#adafruit-io-http-api" target="_blank" rel="noreferrer noopener">Adafruit IO API ↗</a> using <a href="https://en.wikipedia.org/wiki/Ajax_(programming)" target="_blank" rel="noreferrer noopener">AJAX ↗</a>. My <a href="https://www.adafruit.com/product/4745" target="_blank" rel="noreferrer noopener">Adafruit Matrix Portal ↗</a>, a microcontroller board that is connected to an LED matrix, then plays one of the pre-programmed animations based on the data it retrieves from the API.</p>
+                </div>
+
+                <div id="limitations">
+                    <h2>Limitations</h2>
+                    <p>Since the Adafruit Matrix Portal only checks the API once per loop, animations might be skipped if multiple users are updating the API within seconds of each other.</p>
+                </div>
+
+                <div id="more">
+                    <h2>More</h2>
+                    <p>
+                        Typefaces used:<br>
+                        <a href="https://fonts.google.com/specimen/Rubik?preview.text_type=custom" target="_blank" rel="noreferrer noopener">Rubik by Hubert and Fischer, Meir Sadan, and Cyreal ↗</a><br>
+                        <a href="https://fonts.google.com/specimen/Manrope?query=manrope&preview.text_type=custom" target="_blank" rel="noreferrer noopener">Manrope by Mikhail Sharanda ↗</a><br>
+                    </p>
+                    <p>Special thanks to Majed Bou Ghanem, Zhuoyan Xie, and <a href="https://www.youtube.com/channel/UCZDfnUn74N0WeAPvMqTOrtA" target="_blank" rel="noreferrer noopener">Spaceinvader One ↗</a></p>
+                    <p>Don’t worry, I do not track your IP or collect your data like those big tech companies. This page does not use cookies.</p>
+                    <p>Like my work? You can find more of it on <a href="https://www.instagram.com/richardfxr/" target="_blank" rel="noreferrer noopener">Instagram ↗</a> and <a href="https://www.behance.net/richardfxr" target="_blank" rel="noreferrer noopener">Behance ↗</a>. My <a href="https://www.richardfxr.com" target="_blank" rel="noreferrer noopener">personal website ↗</a> is currently being redesigned but it should be ready in a few weeks.</p>
+                </div>
+
+            </div>
+
+            <footer>
+                <p>Designed and coded by yours truly.</p>
+                <p>Copyright © 2021 Xiangrui Fu. All rights reserved.</p>
+            </footer>
+
+        </div>
+    </div>
+
+
+
+    <!-- JavaScript -->
+    <script>
+            
+        function aniOne() {
+            document.getElementById("textOne").innerHTML = "waving";
+            document.getElementById("textTwo").innerHTML = "poke";
+            document.getElementById("textThree").innerHTML = "tickle";
+            document.getElementById("textFour").innerHTML = "pinch";
+            $.ajax({
+                type: "PUT",
+                url: "https://io.adafruit.com/api/v2/IO_USERNAME/feeds/feed_id/data/id?x-aio-key=IO_KEY",
+                data: {"value": "1"},
+                }).done(function( o ) {
+                    document.getElementById("textOne").innerHTML = "waved!";
+                });
+        }
+
+        function aniTwo() {
+            document.getElementById("textOne").innerHTML = "wave";
+            document.getElementById("textTwo").innerHTML = "poking";
+            document.getElementById("textThree").innerHTML = "tickle";
+            document.getElementById("textFour").innerHTML = "pinch";
+            $.ajax({
+                type: "PUT",
+                url: "https://io.adafruit.com/api/v2/IO_USERNAME/feeds/feed_id/data/id?x-aio-key=IO_KEY",
+                data: {"value": "2"},
+                }).done(function( o ) {
+                    document.getElementById("textTwo").innerHTML = "poked!";
+                });
+        }
+
+        function aniThree() {
+            document.getElementById("textOne").innerHTML = "wave";
+            document.getElementById("textTwo").innerHTML = "poke";
+            document.getElementById("textThree").innerHTML = "tickling";
+            document.getElementById("textFour").innerHTML = "pinch";
+            $.ajax({
+                type: "PUT",
+                url: "https://io.adafruit.com/api/v2/IO_USERNAME/feeds/feed_id/data/id?x-aio-key=IO_KEY",
+                data: {"value": "3"},
+                }).done(function( o ) {
+                    document.getElementById("textThree").innerHTML = "tickled!";
+                });
+        }
+
+        function aniFour() {
+            document.getElementById("textOne").innerHTML = "wave";
+            document.getElementById("textTwo").innerHTML = "poke";
+            document.getElementById("textThree").innerHTML = "tickle";
+            document.getElementById("textFour").innerHTML = "pinching";
+            $.ajax({
+                type: "PUT",
+                url: "https://io.adafruit.com/api/v2/IO_USERNAME/feeds/feed_id/data/id?x-aio-key=IO_KEY",
+                data: {"value": "4"},
+                }).done(function( o ) {
+                    document.getElementById("textFour").innerHTML = "pinched!";
+                });
+        }
+
+        function reset() {
+            document.getElementById("textOne").innerHTML = "wave";
+            document.getElementById("textTwo").innerHTML = "poke";
+            document.getElementById("textThree").innerHTML = "tickle";
+            document.getElementById("textFour").innerHTML = "pinch";
+            $.ajax({
+                type: "PUT",
+                url: "https://io.adafruit.com/api/v2/IO_USERNAME/feeds/feed_id/data/id?x-aio-key=IO_KEY",
+                data: {"value": "0"},
+                });
+        }
+    </script>
+
+</body>
+</html>
