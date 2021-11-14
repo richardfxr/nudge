@@ -1,4 +1,6 @@
-# Nudge
+# Nudge (DEPRECATED)
+
+This project is no longer being update. Code related to the Adafruit IO API no longer work. Original README:
 
 Nudge was conceived as a way to anonymously let someone know you are thinking about them without demanding a response. Especially during these challenging times, Nudge is meant to remind people that they are not alone.
 
